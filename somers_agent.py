@@ -486,7 +486,7 @@ class SomersAgent:
 
         # 5. 푸시 실행
         print(" -> 깃허브 저장소로 Push를 시도합니다...")
-        push_res = run_git(["git", "push", "-u", "origin", "main"])
+        push_res = run_git(["git", "push", "-f", "-u", "origin", "main"])
         if push_res.returncode == 0:
             print(" -> 깃허브 동기화가 성공적으로 완료되었습니다!")
         else:
