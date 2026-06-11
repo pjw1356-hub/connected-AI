@@ -464,13 +464,15 @@ class SomersAgent:
 
         # 2. 원격 저장소 설정 체크 및 추가/갱신
         remote_check = run_git(["git", "remote", "-v"])
-        if "origin" in remote_check.stdout:
-            if repo_url not in remote_check.stdout:
-                print(" -> 원격 저장소 주소를 업데이트합니다.")
-                run_git(["git", "remote", "set-url", "origin", repo_url])
-        else:
+        if "origin" not in remote_check.stdout:
             print(" -> 원격 저장소(origin)를 등록합니다.")
             run_git(["git", "remote", "add", "origin", repo_url])
+        else:
+            # 이미 등록된 경우 사용자가 설정한 토큰 URL(ghp_... 포함)이 지워지지 않도록 덮어쓰기를 스킵하되, 
+            # 만약 다른 저장소로 강제 전환하고자 한다면 set-url 할 수 있게 설계
+            if "connected-AI" not in remote_check.stdout:
+                print(" -> 새로운 원격 저장소 주소로 갱신합니다.")
+                run_git(["git", "remote", "set-url", "origin", repo_url])
 
         # 3. 파일 스테이징
         # 주요 동기화 대상 명시
