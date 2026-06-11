@@ -140,9 +140,10 @@ class SomersAgent:
                 }
             ]
 
-    def evaluate_reliability(self, doc: Dict[str, Any]) -> Dict[str, Any]:
+    def evaluate_reliability(self, doc: Dict[str, Any], constraints: Dict[str, Any] = None) -> Dict[str, Any]:
         """
         문서 신뢰도를 7대 항목 기준으로 평가하고 종합 별점을 부여합니다.
+        사용자의 요구 조건(최신성 기준 연도 등)이 있다면 동적으로 점수를 조정합니다.
         """
         scores = {}
         
@@ -153,15 +154,21 @@ class SomersAgent:
         else:
             scores["source_reliability"] = 3
             
-        # 2. 최신성
+        # 2. 최신성 (사용자 제한 조건 반영)
         year = doc.get("year", 2024)
         age = datetime.datetime.now().year - year
+        
+        max_age = 5 # 기본값은 5년
+        if constraints and "max_age" in constraints:
+            max_age = constraints["max_age"]
+            
         if age <= 2:
             scores["recency"] = 5
-        elif age <= 5:
+        elif age <= max_age:
             scores["recency"] = 4
         else:
-            scores["recency"] = 2
+            # 사용자가 설정한 최신성 기준 연도를 초과한 경우 최하점 처리
+            scores["recency"] = 1
             
         # 3. 전문성
         scores["professionalism"] = 5 if "가이드라인" in doc.get("title", "") or "표준" in doc.get("title", "") or "연구" in doc.get("title", "") else 4
@@ -190,10 +197,10 @@ class SomersAgent:
             "rating_stars": stars
         }
 
-    def train_ai_knowledge(self, doc: Dict[str, Any], rating_info: Dict[str, Any], topic: str) -> Dict[str, Any]:
+    def train_ai_knowledge(self, doc: Dict[str, Any], rating_info: Dict[str, Any], topic: str, constraints: Dict[str, Any] = None) -> Dict[str, Any]:
         """
         새로 취득한 고신뢰도 전문문서 정보를 AI가 학습하기 좋은 '지식 청크' 및 'Q&A' 구조로 변환합니다.
-        이는 인공지능이 매일 지식을 정확하게 습득할 수 있는 고효율 학습 방법론입니다.
+        사용자의 사전 요청사항(조건)이 있을 경우 학습용 Q&A에 명시적으로 반영합니다.
         """
         # AI 학습용 QA 및 지식 세트 생성
         knowledge_chunks = [
@@ -206,6 +213,13 @@ class SomersAgent:
                 "answer": f"본 문서는 {doc['year']}년 {doc['source']}에서 발행된 {doc['type']}로, 신뢰도 등급은 {rating_info['rating_stars']} 입니다."
             }
         ]
+        
+        # 사용자 세부 요청사항 반영
+        if constraints and constraints.get("user_request"):
+            knowledge_chunks.append({
+                "question": f"이 지식을 활용할 때 사용자의 요청사항인 '{constraints['user_request']}' 측면에서 검토해야 할 점은 무엇입니까?",
+                "answer": f"문서의 분석 결과, {doc['details']}에 기반하여 사용자가 기재한 조건인 '{constraints['user_request']}'에 맞추어 의사결정을 지원합니다."
+            })
 
         learning_entry = {
             "date": datetime.date.today().isoformat(),
@@ -223,11 +237,13 @@ class SomersAgent:
         
         return learning_entry
 
-    def run_daily_learning(self, topic: str) -> List[Dict[str, Any]]:
+    def run_daily_learning(self, topic: str, constraints: Dict[str, Any] = None) -> List[Dict[str, Any]]:
         """
-        주제를 받아 문서를 수집, 평가하고 지식 저장소에 누적 저장하는 전체 프로세스입니다.
+        주제와 제약 조건을 받아 문서를 수집, 평가하고 지식 저장소에 누적 저장하는 전체 프로세스입니다.
         """
         print(f"[{datetime.date.today().isoformat()}] '{topic}' 분야 전문 지식 습득 및 학습 시작...")
+        if constraints:
+            print(f" -> 적용된 사전 학습 조건: {constraints}")
         
         # 1. 쿼리 기획
         queries = self.plan_queries(topic)
@@ -239,11 +255,11 @@ class SomersAgent:
         
         new_learnings = []
         for doc in raw_docs:
-            # 3. 신뢰도 검증
-            rating_info = self.evaluate_reliability(doc)
+            # 3. 신뢰도 검증 (동적 제약조건 전달)
+            rating_info = self.evaluate_reliability(doc, constraints)
             
-            # 4. AI 학습 데이터 변환
-            learning_entry = self.train_ai_knowledge(doc, rating_info, topic)
+            # 4. AI 학습 데이터 변환 (동적 제약조건 전달)
+            learning_entry = self.train_ai_knowledge(doc, rating_info, topic, constraints)
             new_learnings.append(learning_entry)
             
             # 5. 지식베이스에 추가 (중복 방지)
