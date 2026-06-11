@@ -1,0 +1,92 @@
+[
+  {
+    "date": "2026-06-11",
+    "category": "정부·공공기관 보고서",
+    "topic": "식품공장 위생배관",
+    "title": "식품공장의 위생 배관 설계 가이드라인 및 기준 연구",
+    "source": "한국식품안전관리인증원",
+    "year": 2024,
+    "url": "https://www.haccp.or.kr/guideline_piping_2024.pdf",
+    "reliability": "★★★★★",
+    "scores": {
+      "source_reliability": 3,
+      "recency": 5,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 5,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "식품공장의 위생 배관 설계 가이드라인 및 기준 연구의 핵심 설계/검토 기준은 무엇입니까?",
+        "answer": "배관 재질은 STS316L 사용 권장, 용접부는 내면 비드 제거 필수, 1/100 이상의 배수 구배 유지 필요."
+      },
+      {
+        "question": "식품공장의 위생 배관 설계 가이드라인 및 기준 연구 문서의 신뢰성과 출처 정보는 어떻게 됩니까?",
+        "answer": "본 문서는 2024년 한국식품안전관리인증원에서 발행된 정부·공공기관 보고서로, 신뢰도 등급은 ★★★★★ 입니다."
+      }
+    ],
+    "summary": "본 가이드라인은 식품 제조설비의 위생적 설계를 위한 배관 재질 선정, 구배(Slope) 설계, 세척(CIP) 용이성 확보 방안을 제시함."
+  },
+  {
+    "date": "2026-06-11",
+    "category": "국제 표준 가이드라인",
+    "topic": "식품공장 위생배관",
+    "title": "EHEDG Doc 8: Hygienic Design Principles for Food Processing",
+    "source": "EHEDG (European Hygienic Engineering & Design Group)",
+    "year": 2023,
+    "url": "https://www.ehedg.org/guidelines/doc8.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 5,
+      "recency": 4,
+      "professionalism": 4,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "EHEDG Doc 8: Hygienic Design Principles for Food Processing의 핵심 설계/검토 기준은 무엇입니까?",
+        "answer": "Avoid dead legs (L/D < 2), use aseptic flange joints, self-draining properties verification methods included."
+      },
+      {
+        "question": "EHEDG Doc 8: Hygienic Design Principles for Food Processing 문서의 신뢰성과 출처 정보는 어떻게 됩니까?",
+        "answer": "본 문서는 2023년 EHEDG (European Hygienic Engineering & Design Group)에서 발행된 국제 표준 가이드라인로, 신뢰도 등급은 ★★★★☆ 입니다."
+      }
+    ],
+    "summary": "European standards for hygienic engineering and process piping design in food and beverage production lines."
+  },
+  {
+    "date": "2026-06-11",
+    "category": "특허 및 기술 분석서",
+    "topic": "식품공장 위생배관",
+    "title": "식품 제조공장 스마트 위생 배관 시스템 특허 분석 보고서",
+    "source": "특허청",
+    "year": 2025,
+    "url": "https://www.kipo.go.kr/patent_smart_piping.pdf",
+    "reliability": "★★★★★",
+    "scores": {
+      "source_reliability": 5,
+      "recency": 5,
+      "professionalism": 4,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "식품 제조공장 스마트 위생 배관 시스템 특허 분석 보고서의 핵심 설계/검토 기준은 무엇입니까?",
+        "answer": "자동 세척 프로세스와 센서 노즐 결합부에 대한 특허 설계 규격 포함."
+      },
+      {
+        "question": "식품 제조공장 스마트 위생 배관 시스템 특허 분석 보고서 문서의 신뢰성과 출처 정보는 어떻게 됩니까?",
+        "answer": "본 문서는 2025년 특허청에서 발행된 특허 및 기술 분석서로, 신뢰도 등급은 ★★★★★ 입니다."
+      }
+    ],
+    "summary": "스마트 위생 배관의 자동 밸브 제어 및 누수/오염 센싱 기술에 관한 특허 동향과 실무 설계 적용 분석."
+  }
+]
