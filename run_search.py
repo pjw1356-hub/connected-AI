@@ -40,8 +40,12 @@ def get_interactive_inputs():
     user_request_raw = input("3. 학습 및 검토 시 반영할 추가 상세 조건/요청사항을 입력하세요\n   (예: '수치 중심 설계 규격 검토', '국가 표준 위주 수집'): ").strip()
     user_request = sanitize_input(user_request_raw)
     
-    # 4. 깃허브 동기화 여부
-    sync_yn = input("4. 학습 완료 후 결과를 깃허브 저장소로 바로 동기화할까요? (y/N): ").strip().lower()
+    # 4. 로컬 PDF 학습 여부 추가
+    pdf_yn = input("4. 현재 폴더 내의 PDF 문서들도 함께 학습하여 분류/지식화할까요? (y/N): ").strip().lower()
+    learn_pdf = pdf_yn in ["y", "yes"]
+    
+    # 5. 깃허브 동기화 여부
+    sync_yn = input("5. 학습 완료 후 결과를 깃허브 저장소로 바로 동기화할까요? (y/N): ").strip().lower()
     sync = sync_yn in ["y", "yes"]
     
     print("="*60 + "\n")
@@ -49,7 +53,7 @@ def get_interactive_inputs():
     return topic, {
         "max_age": max_age,
         "user_request": user_request
-    }, sync
+    }, learn_pdf, sync
 
 def main():
     parser = argparse.ArgumentParser(description="소머즈 에이전트 전문 문서 검색 및 일일 AI 학습기 CLI")
@@ -59,40 +63,53 @@ def main():
     parser.add_argument("--chart", type=str, default="신뢰도_분포.png", help="저장할 시각화 차트 파일명")
     parser.add_argument("--sync", action="store_true", help="학습 완료 후 깃허브 자동 동기화 활성화")
     parser.add_argument("--repo", type=str, default="https://github.com/pjw1356-hub/connected-AI.git", help="동기화할 깃허브 저장소 주소")
+    parser.add_argument("--pdf-dir", type=str, default=None, help="로컬 PDF를 로드하여 일괄 지식화할 디렉토리 경로")
     
     args = parser.parse_args()
     
     # 주제가 아규먼트로 제공되지 않은 경우, 인터랙티브 대화형 입력 모드 구동
     if args.topic is None:
-        topic, constraints, sync = get_interactive_inputs()
+        topic, constraints, learn_pdf, sync = get_interactive_inputs()
     else:
         topic = args.topic
         constraints = {
             "max_age": 5,
             "user_request": ""
         }
+        learn_pdf = (args.pdf_dir is not None)
         sync = args.sync
         
     agent = SomersAgent()
     try:
-        # 1. 일일 학습 프로세스 작동 (수집, 평가, 사용자 조건 및 지식베이스 누적)
-        learnings = agent.run_daily_learning(topic, constraints)
+        learnings = []
         
-        # 2. 산출물 파일 생성
-        agent.generate_docx_report(learnings, args.docx)
-        agent.generate_md_report(learnings, args.md)
-        agent.visualize_statistics(learnings, args.chart)
+        # 1. 로컬 PDF 파일들을 지식화하는 파이프라인 수행
+        if learn_pdf or args.pdf_dir:
+            pdf_path = args.pdf_dir if args.pdf_dir else "."
+            pdf_learnings = agent.learn_local_pdfs(pdf_path)
+            learnings.extend(pdf_learnings)
+            
+        # 2. 일일 웹 검색 학습 프로세스 작동
+        web_learnings = agent.run_daily_learning(topic, constraints)
+        learnings.extend(web_learnings)
         
-        # 3. 깃허브 동기화 진행
+        # 3. 산출물 파일 생성 (수집/학습 내역이 있을 시)
+        if learnings:
+            agent.generate_docx_report(learnings, args.docx)
+            agent.generate_md_report(learnings, args.md)
+            agent.visualize_statistics(learnings, args.chart)
+        
+        # 4. 깃허브 동기화 진행
         if sync:
             agent.sync_to_github(args.repo)
         
         print("\n" + "="*50)
-        print("★ 소머즈 에이전트 일일 지식 학습 성공 ★")
+        print("★ 소머즈 에이전트 일일 지식 학습 및 PDF 지식화 성공 ★")
         print(f"1. AI 지식베이스 누적 저장 완료: knowledge_base.json")
-        print(f"2. 마크다운 보고서 생성 완료: {args.md}")
-        print(f"3. MS Word 보고서 생성 완료: {args.docx}")
-        print(f"4. 신뢰도 평가 통계 차트 완료: {args.chart}")
+        if learnings:
+            print(f"2. 마크다운 보고서 생성 완료: {args.md}")
+            print(f"3. MS Word 보고서 생성 완료: {args.docx}")
+            print(f"4. 신뢰도 평가 통계 차트 완료: {args.chart}")
         if sync:
             print(f"5. 깃허브 저장소 동기화 완료")
         print("="*50)
