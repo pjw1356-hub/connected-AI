@@ -510,40 +510,63 @@ class SomersAgent:
         else:
             print(" -> 깃허브 푸시 중 오류가 발생했거나 최신 변경 사항이 이미 반영되어 있습니다.")
 
-    def learn_local_pdfs(self, pdf_dir: str = ".") -> List[Dict[str, Any]]:
+    def _extract_docx_text(self, docx_path: str) -> str:
         """
-        로컬 디렉토리 내의 모든 PDF 파일을 찾아 텍스트를 추출하고,
-        유형별로 자동 분류하여 AI RAG용 지식 청크(Q&A)로 학습 및 저장합니다.
+        DOCX 파일에서 본문 문단 및 표 내부의 텍스트를 추출합니다.
         """
-        print(f"\n[{datetime.date.today().isoformat()}] 로컬 폴더 '{pdf_dir}' 내 PDF 일괄 학습 및 지식화 기동...")
-        pdf_pattern = os.path.join(pdf_dir, "*.pdf")
-        pdf_files = glob.glob(pdf_pattern)
+        try:
+            doc = docx.Document(docx_path)
+            full_text = []
+            for para in doc.paragraphs:
+                if para.text:
+                    full_text.append(para.text)
+            for table in doc.tables:
+                for row in table.rows:
+                    for cell in row.cells:
+                        if cell.text:
+                            full_text.append(cell.text)
+            return "\n".join(full_text)
+        except Exception as e:
+            print(f" -> DOCX 텍스트 추출 중 오류 발생 ({os.path.basename(docx_path)}): {e}")
+            return ""
+
+    def learn_local_files(self, file_paths: List[str]) -> List[Dict[str, Any]]:
+        """
+        제공된 PDF 및 DOCX 파일 목록을 읽고 분석하여 RAG용 지식 청크(Q&A)로 학습 및 저장합니다.
+        """
+        print(f"\n[{datetime.date.today().isoformat()}] 지정된 로컬 문서 일괄 학습 및 지식화 기동...")
         
-        if not pdf_files:
-            print(" -> 학습할 PDF 파일이 존재하지 않습니다.")
+        if not file_paths:
+            print(" -> 학습할 파일 목록이 비어 있습니다.")
             return []
             
-        print(f" -> 총 {len(pdf_files)}개의 PDF 문서 발견: {[os.path.basename(f) for f in pdf_files]}")
+        print(f" -> 총 {len(file_paths)}개의 문서 발견: {[os.path.basename(f) for f in file_paths]}")
         
         new_learnings = []
-        for pdf_path in pdf_files:
-            filename = os.path.basename(pdf_path)
+        for file_path in file_paths:
+            filename = os.path.basename(file_path)
+            ext = os.path.splitext(filename)[1].lower()
             print(f" -> '{filename}' 파싱 및 학습 진행 중...")
             
             try:
-                # 1. PDF 텍스트 추출 (pypdf 사용)
-                reader = PdfReader(pdf_path)
                 full_text = ""
-                # 주요 지식은 대개 앞부분에 있으므로 최대 5페이지 분량 파싱
-                pages_to_read = min(len(reader.pages), 5)
-                for i in range(pages_to_read):
-                    text = reader.pages[i].extract_text()
-                    if text:
-                        full_text += text + "\n"
+                # 1. 확장자별 텍스트 추출
+                if ext == ".pdf":
+                    reader = PdfReader(file_path)
+                    pages_to_read = min(len(reader.pages), 5)
+                    for i in range(pages_to_read):
+                        text = reader.pages[i].extract_text()
+                        if text:
+                            full_text += text + "\n"
+                elif ext == ".docx":
+                    full_text = self._extract_docx_text(file_path)
+                else:
+                    print(f" -> 지원하지 않는 확장자입니다 ({ext}). 건너뜁니다.")
+                    continue
                         
                 # 텍스트가 극도로 부족한 경우 예외 처리
                 if len(full_text.strip()) < 50:
-                    full_text = "본문 텍스트를 추출할 수 없거나 스캔형 이미지 PDF 문서입니다. 파일명을 기반으로 지식을 정리합니다."
+                    full_text = "본문 텍스트를 추출할 수 없거나 이미지 위주의 문서입니다. 파일명을 기반으로 지식을 정리합니다."
                 
                 # 2. 카테고리 자동 분류 (텍스트 키워드 기반 분류)
                 content_lower = full_text.lower()
@@ -604,30 +627,39 @@ class SomersAgent:
                 learning_entry = {
                     "date": datetime.date.today().isoformat(),
                     "category": category,
-                    "topic": f"로컬 PDF: {clean_filename}",
+                    "topic": f"로컬 문서: {clean_filename}",
                     "title": clean_filename,
                     "source": source,
                     "year": year,
-                    "url": f"file:///{os.path.abspath(pdf_path).replace(os.sep, '/')}",
+                    "url": f"file:///{os.path.abspath(file_path).replace(os.sep, '/')}",
                     "reliability": stars,
                     "scores": scores,
                     "knowledge_chunks": knowledge_chunks,
                     "summary": summary,
-                    "applied_constraints": {"mode": "local_pdf_parser"}
+                    "applied_constraints": {"mode": "local_file_parser"}
                 }
                 
                 new_learnings.append(learning_entry)
                 
                 # 중복 저장 방지
-                if not any(item["title"] == learning_entry["title"] for item in self.kb):
-                    self.kb.append(learning_entry)
+                # 기존 항목 중 동일 타이틀이 있다면 덮어쓰거나 지우고 교체하도록 처리
+                self.kb = [item for item in self.kb if item["title"] != learning_entry["title"]]
+                self.kb.append(learning_entry)
                     
             except Exception as e:
                 print(f" -> '{filename}' 파싱 오류 발생: {e}")
                 
         self.save_kb()
-        print(f" -> 로컬 PDF 총 {len(new_learnings)}건을 성공적으로 분류 학습하여 지식베이스에 추가하였습니다.")
+        print(f" -> 로컬 문서 총 {len(new_learnings)}건을 성공적으로 분류 학습하여 지식베이스에 추가하였습니다.")
         return new_learnings
+
+    def learn_local_pdfs(self, pdf_dir: str = ".") -> List[Dict[str, Any]]:
+        """
+        하위 호환성을 위해 로컬 디렉토리 내의 모든 PDF 파일을 찾아 학습하도록 호출합니다.
+        """
+        pdf_pattern = os.path.join(pdf_dir, "*.pdf")
+        pdf_files = glob.glob(pdf_pattern)
+        return self.learn_local_files(pdf_files)
 
 
 # 단독 테스트를 위한 메인 함수

@@ -420,5 +420,236 @@
       }
     ],
     "summary": "인공지능의 기초 기술 분석과 최신 적용 표준 분석 내용."
+  },
+  {
+    "date": "2026-06-12",
+    "category": "학술 논문",
+    "topic": "로컬 문서: A Survey on Memory Mechanisms in the Era of LLMs",
+    "title": "A Survey on Memory Mechanisms in the Era of LLMs",
+    "source": "로컬 소머즈 문서고",
+    "year": 2025,
+    "url": "file:///d:/4.Others/antigravity/전문문서 검색/A Survey on Memory Mechanisms in the Era of LLMs.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'A Survey on Memory Mechanisms in the Era of LLMs' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Li..."
+      },
+      {
+        "question": "'A Survey on Memory Mechanisms in the Era of LLMs' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2025년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Li...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    }
+  },
+  {
+    "date": "2026-06-12",
+    "category": "학술 논문",
+    "topic": "로컬 문서: ChatDev",
+    "title": "ChatDev",
+    "source": "로컬 소머즈 문서고",
+    "year": 2015,
+    "url": "file:///d:/4.Others/antigravity/전문문서 검색/ChatDev.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'ChatDev' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: ChatDev: Communicative Agents for Software Development Chen Qian⋆ Wei Liu⋆ Hongzhang Liu♠ Nuo Chen⋆ Yufan Dang⋆ Jiahao Li⋆ Cheng Yang♣ Weize Chen⋆ Yusheng Su⋆ Xin Cong⋆ Juyuan Xu⋆ ..."
+      },
+      {
+        "question": "'ChatDev' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "ChatDev: Communicative Agents for Software Development Chen Qian⋆ Wei Liu⋆ Hongzhang Liu♠ Nuo Chen⋆ Yufan Dang⋆ Jiahao Li⋆ Cheng Yang♣ Weize Chen⋆ Yusheng Su⋆ Xin Cong⋆ Juyuan Xu⋆ ...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    }
+  },
+  {
+    "date": "2026-06-12",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Design and Evaluation for Enterprise",
+    "title": "Design and Evaluation for Enterprise",
+    "source": "로컬 소머즈 문서고",
+    "year": 2024,
+    "url": "file:///d:/4.Others/antigravity/전문문서 검색/Design and Evaluation for Enterprise.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Design and Evaluation for Enterprise' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications Raphael Shu∗, Nilaksh Das ∗, Michelle Yuan ∗, Monica Sunkara, Yi Zhang AWS Bedr..."
+      },
+      {
+        "question": "'Design and Evaluation for Enterprise' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2024년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications Raphael Shu∗, Nilaksh Das ∗, Michelle Yuan ∗, Monica Sunkara, Yi Zhang AWS Bedr...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    }
+  },
+  {
+    "date": "2026-06-12",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Interactive Simulacra of Human Behavior",
+    "title": "Interactive Simulacra of Human Behavior",
+    "source": "로컬 소머즈 문서고",
+    "year": 2023,
+    "url": "file:///d:/4.Others/antigravity/전문문서 검색/Interactive Simulacra of Human Behavior.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Interactive Simulacra of Human Behavior' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Generative Agents: Interactive Simulacra of Human Behavior Joon Sung Park Stanford University Stanford, USA joonspk@stanford.edu Joseph C. O’Brien Stanford University Stanford, USA..."
+      },
+      {
+        "question": "'Interactive Simulacra of Human Behavior' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2023년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Generative Agents: Interactive Simulacra of Human Behavior Joon Sung Park Stanford University Stanford, USA joonspk@stanford.edu Joseph C. O’Brien Stanford University Stanford, USA...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    }
+  },
+  {
+    "date": "2026-06-12",
+    "category": "학술 논문",
+    "topic": "로컬 문서: KoMA",
+    "title": "KoMA",
+    "source": "로컬 소머즈 문서고",
+    "year": 2024,
+    "url": "file:///d:/4.Others/antigravity/전문문서 검색/KoMA.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'KoMA' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: 1 KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models Kemou Jiang1, Xuan Cai 1, Zhiyong Cui* 1, Aoyong Li 1, Yilong Ren 1, Haiyang Yu 1, ..."
+      },
+      {
+        "question": "'KoMA' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2024년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "1 KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models Kemou Jiang1, Xuan Cai 1, Zhiyong Cui* 1, Aoyong Li 1, Yilong Ren 1, Haiyang Yu 1, ...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    }
+  },
+  {
+    "date": "2026-06-12",
+    "category": "기술 설계 문서",
+    "topic": "로컬 문서: MCP",
+    "title": "MCP",
+    "source": "로컬 소머즈 문서고",
+    "year": 2024,
+    "url": "file:///d:/4.Others/antigravity/전문문서 검색/MCP.docx",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'MCP' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '기술 설계 문서' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: MCP(모델 컨텍스트 프로토콜)란 무엇인가? 작동 원리 주요 생태계 구성원 관련 기술과의 비교 (AI 엔지니어를 위한 심층 분석) Notion MCP 서버란 무엇인가? 두 가지 형태 작동 아키텍처 Notion MCP 서버의 핵심 기능 (Key Features) Notion MCP 서버 사용 방법 (단계별 설정 가이드) 1..."
+      },
+      {
+        "question": "'MCP' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2024년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "MCP(모델 컨텍스트 프로토콜)란 무엇인가? 작동 원리 주요 생태계 구성원 관련 기술과의 비교 (AI 엔지니어를 위한 심층 분석) Notion MCP 서버란 무엇인가? 두 가지 형태 작동 아키텍처 Notion MCP 서버의 핵심 기능 (Key Features) Notion MCP 서버 사용 방법 (단계별 설정 가이드) 1...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    }
+  },
+  {
+    "date": "2026-06-12",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Measuring the Effect on Human-Like Agenda Generation",
+    "title": "Measuring the Effect on Human-Like Agenda Generation",
+    "source": "FDA",
+    "year": 2015,
+    "url": "file:///d:/4.Others/antigravity/전문문서 검색/Measuring the Effect on Human-Like Agenda Generation.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Measuring the Effect on Human-Like Agenda Generation' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Inducing Personality in LLM-Based Honeypot Agents: Measuring the Effect on Human-Like Agenda Generation Lewis Newsham and Ryan Hyland and Daniel Prince School of Computing and Comm..."
+      },
+      {
+        "question": "'Measuring the Effect on Human-Like Agenda Generation' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 FDA 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Inducing Personality in LLM-Based Honeypot Agents: Measuring the Effect on Human-Like Agenda Generation Lewis Newsham and Ryan Hyland and Daniel Prince School of Computing and Comm...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    }
   }
 ]
