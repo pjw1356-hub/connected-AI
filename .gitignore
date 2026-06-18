@@ -1,34 +1,5 @@
-# Node.js
-node_modules/
-dist/
-.cache/
-*.log
-
-# Python
-__pycache__/
-*.py[cod]
+# 임시 파일 및 캐시 제외
+~$*
 .venv/
-*.egg-info/
-.eggs/
-
-# 환경 변수 및 시크릿
-.env
-.env.local
-.env.*.local
-*.pem
-*.key
-
-# OS 생성 파일
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# 빌드 산출물 (용량 큰 파일)
-*.mp4
-*.mp3
-*.wav
-*.avi
-
-# 대용량 문서 (필요 시 주석 해제)
-# *.pptx
-# *.docx
+__pycache__/
+*.pyc
