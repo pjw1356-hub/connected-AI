@@ -603,6 +603,7 @@
       }
     ],
     "summary": "Deep Neural Networks for YouTube Recommendations Paul Covington, Jay Adams, Emre Sargin Google Mountain View, CA {pcovington, jka, msargin}@google.com ABSTRACT YouTube represents o...",
+    "file_mtime": 1778204470.4486263,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -637,6 +638,7 @@
       }
     ],
     "summary": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Li...",
+    "file_mtime": 1781243524.3349915,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -671,6 +673,7 @@
       }
     ],
     "summary": "Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs Yangning Li1*, Weizhi Zhang2*, Yuyao Yang2, Wei-Chieh Huang2, Yaozu Wu3 Junyu Luo4, Yuanchen Bei5...",
+    "file_mtime": 1780266831.3241942,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -705,6 +708,7 @@
       }
     ],
     "summary": "A Behavior Model for Persuasive Design    BJ Fogg  Persuasive Technology Lab  Stanford University  captology.stanford.edu  www.bjfogg.com  bjfogg@stanford.edu         Abstract  Thi...",
+    "file_mtime": 1779855988.214945,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -739,6 +743,7 @@
       }
     ],
     "summary": "ChatDev: Communicative Agents for Software Development Chen Qian⋆ Wei Liu⋆ Hongzhang Liu♠ Nuo Chen⋆ Yufan Dang⋆ Jiahao Li⋆ Cheng Yang♣ Weize Chen⋆ Yusheng Su⋆ Xin Cong⋆ Juyuan Xu⋆ ...",
+    "file_mtime": 1781243460.6872838,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -773,6 +778,7 @@
       }
     ],
     "summary": "Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications Raphael Shu∗, Nilaksh Das∗, Michelle Yuan∗, Monica Sunkara, Yi Zhang AWS Bedroc...",
+    "file_mtime": 1781243623.4912288,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -807,6 +813,7 @@
       }
     ],
     "summary": "World Models David Ha 1 J¨urgen Schmidhuber 2 3 Abstract We explore building generative neural network models of popular reinforcement learning environments. Our world model can be...",
+    "file_mtime": 1779093919.600039,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -841,6 +848,7 @@
       }
     ],
     "summary": "본문 텍스트를 추출할 수 없거나 이미지 위주의 문서입니다. 파일명을 기반으로 지식을 정리합니다....",
+    "file_mtime": 1770886340.881046,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -875,6 +883,7 @@
       }
     ],
     "summary": "Generative Agents: Interactive Simulacra of Human Behavior Joon Sung Park Stanford University Stanford, USA joonspk@stanford.edu Joseph C. O’Brien Stanford University Stanford, USA...",
+    "file_mtime": 1781243288.4355016,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -909,6 +918,7 @@
       }
     ],
     "summary": "1 KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models Kemou Jiang1, Xuan Cai1, Zhiyong Cui*1, Aoyong Li1, Yilong Ren1, Haiyang Yu1, Hao Y...",
+    "file_mtime": 1781243681.00272,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -943,6 +953,7 @@
       }
     ],
     "summary": "LORA: LOW-RANK ADAPTATION OF LARGE LAN- GUAGE MODELS Edward Hu∗ Yelong Shen∗ Phillip Wallis Zeyuan Allen-Zhu Yuanzhi Li Shean Wang Lu Wang Weizhu Chen Microsoft Corporation {edward...",
+    "file_mtime": 1780353308.1406717,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -977,6 +988,7 @@
       }
     ],
     "summary": "Inducing Personality in LLM-Based Honeypot Agents: Measuring the Effect on Human-Like Agenda Generation Lewis Newsham and Ryan Hyland and Daniel Prince School of Computing and Comm...",
+    "file_mtime": 1781243790.1718502,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -1011,6 +1023,7 @@
       }
     ],
     "summary": "MEDICAL GRAPH RAG: TOWARDS SAFE MEDICAL LARGE LANGUAGE MODEL VIA GRAPH RETRIEVAL- AUGMENTED GENERATION Junde Wu University of Oxford jundewu@ieee.org Jiayuan Zhu University of Oxfo...",
+    "file_mtime": 1780266865.528547,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -1045,6 +1058,7 @@
       }
     ],
     "summary": "Praise for Natural Language Processing with Transformers Pretrained transformer language models have taken the NLP world by storm, while libraries such as   Transformers have made ...",
+    "file_mtime": 1780008083.9718008,
     "applied_constraints": {
       "mode": "local_file_parser"
     },
@@ -1079,6 +1093,7 @@
       }
     ],
     "summary": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks Patrick Lewis†‡, Ethan Perez⋆, Aleksandra Piktus†, Fabio Petroni†, Vladimir Karpukhin†, Naman Goyal†, Heinrich Kütt...",
+    "file_mtime": 1780007422.2835283,
     "applied_constraints": {
       "mode": "local_file_parser"
     },

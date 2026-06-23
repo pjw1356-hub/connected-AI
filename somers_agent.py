@@ -659,7 +659,22 @@ class SomersAgent:
         for file_path in file_paths:
             filename = os.path.basename(file_path)
             ext = os.path.splitext(filename)[1].lower()
-            print(f" -> '{filename}' 파싱 및 학습 진행 중...")
+            
+            # 최종 수정 시간 획득 및 증분 판단
+            mtime = os.path.getmtime(file_path)
+            clean_filename = os.path.splitext(filename)[0]
+            
+            existing_entry = None
+            for item in self.kb + self.kb_secure:
+                if item.get("title") == clean_filename:
+                    existing_entry = item
+                    break
+                    
+            if existing_entry and existing_entry.get("file_mtime") == mtime:
+                print(f" -> '{filename}' 문서는 이미 최신 상태로 학습되어 있어 분석을 생략합니다. (Skip)")
+                continue
+                
+            print(f" -> '{filename}' 신규/수정 문서 감지! 파싱 및 학습 진행 중...")
             
             try:
                 full_text = ""
@@ -753,6 +768,7 @@ class SomersAgent:
                     "scores": scores,
                     "knowledge_chunks": knowledge_chunks,
                     "summary": summary,
+                    "file_mtime": mtime,
                     "applied_constraints": {"mode": "local_file_parser"}
                 }
                 
