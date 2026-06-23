@@ -942,5 +942,35 @@
       }
     ],
     "summary": "테스트 배관의 기초 기술 분석과 최신 적용 표준 분석 내용."
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "자동화 검증",
+    "title": "자동화 검증에 관한 산업 동향 및 학술 보고서",
+    "source": "한국학술지인용색인 (KCI)",
+    "year": 2024,
+    "url": "https://www.kci.go.kr/article_summary.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 3,
+      "recency": 5,
+      "professionalism": 4,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "자동화 검증에 관한 산업 동향 및 학술 보고서의 핵심 설계/검토 기준은 무엇입니까?",
+        "answer": "실무 적용 포인트 및 핵심 기술 사양이 요약됨."
+      },
+      {
+        "question": "자동화 검증에 관한 산업 동향 및 학술 보고서 문서의 신뢰성과 출처 정보는 어떻게 됩니까?",
+        "answer": "본 문서는 2024년 한국학술지인용색인 (KCI)에서 발행된 학술 논문로, 신뢰도 등급은 ★★★★☆ 입니다."
+      }
+    ],
+    "summary": "자동화 검증의 기초 기술 분석과 최신 적용 표준 분석 내용."
   }
 ]
