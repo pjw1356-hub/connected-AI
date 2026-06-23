@@ -89,7 +89,7 @@ def main():
         
         # 1. 로컬 PDF 파일들을 지식화하는 파이프라인 수행
         if learn_pdf:
-            pdf_path = args.pdf_dir if args.pdf_dir else "incoming_documents"
+            pdf_path = args.pdf_dir if args.pdf_dir else "input"
             pdf_learnings = agent.learn_local_pdfs(pdf_path)
             learnings.extend(pdf_learnings)
             
@@ -99,9 +99,22 @@ def main():
         
         # 3. 산출물 파일 생성 (수집/학습 내역이 있을 시)
         if learnings:
+            # 일반 보고서 생성 (에이전트 내에서 기밀 사항 자동 제외)
             agent.generate_docx_report(learnings, args.docx)
             agent.generate_md_report(learnings, args.md)
             agent.visualize_statistics(learnings, args.chart)
+            
+            # 기밀 정보 감지 시 보안 보고서 분리 생성
+            has_confidential = any(item.get("is_confidential", False) for item in learnings)
+            if has_confidential:
+                print("\n -> [보안] 식품엔지니어링 또는 전시회 기밀 지식이 감지되어 로컬 보안 보고서를 생성합니다.")
+                secure_docx = os.path.join(os.path.dirname(args.docx), "보안_" + os.path.basename(args.docx))
+                secure_md = os.path.join(os.path.dirname(args.md), "보안_" + os.path.basename(args.md))
+                secure_chart = os.path.join(os.path.dirname(args.chart), "보안_" + os.path.basename(args.chart))
+                
+                agent.generate_docx_report(learnings, secure_docx)
+                agent.generate_md_report(learnings, secure_md)
+                agent.visualize_statistics(learnings, secure_chart)
         
         # 4. 깃허브 동기화 진행
         if sync:
@@ -111,9 +124,9 @@ def main():
         print("★ 소머즈 에이전트 일일 지식 학습 및 PDF 지식화 성공 ★")
         print(f"1. AI 지식베이스 누적 저장 완료: knowledge_base.json")
         if learnings:
-            print(f"2. 마크다운 보고서 생성 완료: {args.md}")
-            print(f"3. MS Word 보고서 생성 완료: {args.docx}")
-            print(f"4. 신뢰도 평가 통계 차트 완료: {args.chart}")
+            print(f"2. 일반/보안 마크다운 보고서 생성 완료")
+            print(f"3. 일반/보안 MS Word 보고서 생성 완료")
+            print(f"4. 신뢰도 평가 통계 차트 완료")
         if sync:
             print(f"5. 깃허브 저장소 동기화 완료")
         print("="*50)

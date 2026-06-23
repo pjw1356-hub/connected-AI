@@ -312,303 +312,6 @@
   },
   {
     "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: 45530",
-    "title": "45530",
-    "source": "로컬 소머즈 문서고",
-    "year": 2015,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/45530.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'45530' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Deep Neural Networks for YouTube Recommendations Paul Covington, Jay Adams, Emre Sargin Google Mountain View, CA {pcovington, jka, msargin}@google.com ABSTRACT YouTube represents o..."
-      },
-      {
-        "question": "'45530' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "Deep Neural Networks for YouTube Recommendations Paul Covington, Jay Adams, Emre Sargin Google Mountain View, CA {pcovington, jka, msargin}@google.com ABSTRACT YouTube represents o...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: A Survey on Memory Mechanisms in the Era of LLMs",
-    "title": "A Survey on Memory Mechanisms in the Era of LLMs",
-    "source": "로컬 소머즈 문서고",
-    "year": 2025,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/A Survey on Memory Mechanisms in the Era of LLMs.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 4,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'A Survey on Memory Mechanisms in the Era of LLMs' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Li..."
-      },
-      {
-        "question": "'A Survey on Memory Mechanisms in the Era of LLMs' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2025년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Li...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: agentic rag",
-    "title": "agentic rag",
-    "source": "로컬 소머즈 문서고",
-    "year": 2015,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/agentic rag.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'agentic rag' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs Yangning Li1*, Weizhi Zhang2*, Yuyao Yang2, Wei-Chieh Huang2, Yaozu Wu3 Junyu Luo4, Yuanchen Bei5..."
-      },
-      {
-        "question": "'agentic rag' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs Yangning Li1*, Weizhi Zhang2*, Yuyao Yang2, Wei-Chieh Huang2, Yaozu Wu3 Junyu Luo4, Yuanchen Bei5...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: Captology_Behavior_Model_for_Persuasive_Design_2009_(1)",
-    "title": "Captology_Behavior_Model_for_Persuasive_Design_2009_(1)",
-    "source": "로컬 소머즈 문서고",
-    "year": 2026,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Captology_Behavior_Model_for_Persuasive_Design_2009_(1).pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 4,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'Captology_Behavior_Model_for_Persuasive_Design_2009_(1)' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: A Behavior Model for Persuasive Design    BJ Fogg  Persuasive Technology Lab  Stanford University  captology.stanford.edu  www.bjfogg.com  bjfogg@stanford.edu         Abstract  Thi..."
-      },
-      {
-        "question": "'Captology_Behavior_Model_for_Persuasive_Design_2009_(1)' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2026년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "A Behavior Model for Persuasive Design    BJ Fogg  Persuasive Technology Lab  Stanford University  captology.stanford.edu  www.bjfogg.com  bjfogg@stanford.edu         Abstract  Thi...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: ChatDev",
-    "title": "ChatDev",
-    "source": "로컬 소머즈 문서고",
-    "year": 2015,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/ChatDev.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'ChatDev' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: ChatDev: Communicative Agents for Software Development Chen Qian⋆ Wei Liu⋆ Hongzhang Liu♠ Nuo Chen⋆ Yufan Dang⋆ Jiahao Li⋆ Cheng Yang♣ Weize Chen⋆ Yusheng Su⋆ Xin Cong⋆ Juyuan Xu⋆ ..."
-      },
-      {
-        "question": "'ChatDev' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "ChatDev: Communicative Agents for Software Development Chen Qian⋆ Wei Liu⋆ Hongzhang Liu♠ Nuo Chen⋆ Yufan Dang⋆ Jiahao Li⋆ Cheng Yang♣ Weize Chen⋆ Yusheng Su⋆ Xin Cong⋆ Juyuan Xu⋆ ...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: Design and Evaluation for Enterprise",
-    "title": "Design and Evaluation for Enterprise",
-    "source": "로컬 소머즈 문서고",
-    "year": 2024,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Design and Evaluation for Enterprise.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 4,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'Design and Evaluation for Enterprise' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications Raphael Shu∗, Nilaksh Das∗, Michelle Yuan∗, Monica Sunkara, Yi Zhang AWS Bedroc..."
-      },
-      {
-        "question": "'Design and Evaluation for Enterprise' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2024년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications Raphael Shu∗, Nilaksh Das∗, Michelle Yuan∗, Monica Sunkara, Yi Zhang AWS Bedroc...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: ha_arXiv_2018",
-    "title": "ha_arXiv_2018",
-    "source": "로컬 소머즈 문서고",
-    "year": 2015,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/ha_arXiv_2018.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'ha_arXiv_2018' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: World Models David Ha 1 J¨urgen Schmidhuber 2 3 Abstract We explore building generative neural network models of popular reinforcement learning environments. Our world model can be..."
-      },
-      {
-        "question": "'ha_arXiv_2018' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "World Models David Ha 1 J¨urgen Schmidhuber 2 3 Abstract We explore building generative neural network models of popular reinforcement learning environments. Our world model can be...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "일반 기술 분석서",
-    "topic": "로컬 문서: Humanoid_Trust_and_Safety_Roadmap",
-    "title": "Humanoid_Trust_and_Safety_Roadmap",
-    "source": "로컬 소머즈 문서고",
-    "year": 2026,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Humanoid_Trust_and_Safety_Roadmap.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 4,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'Humanoid_Trust_and_Safety_Roadmap' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '일반 기술 분석서' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: 본문 텍스트를 추출할 수 없거나 이미지 위주의 문서입니다. 파일명을 기반으로 지식을 정리합니다...."
-      },
-      {
-        "question": "'Humanoid_Trust_and_Safety_Roadmap' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2026년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "본문 텍스트를 추출할 수 없거나 이미지 위주의 문서입니다. 파일명을 기반으로 지식을 정리합니다....",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: Interactive Simulacra of Human Behavior",
-    "title": "Interactive Simulacra of Human Behavior",
-    "source": "로컬 소머즈 문서고",
-    "year": 2023,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Interactive Simulacra of Human Behavior.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 4,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'Interactive Simulacra of Human Behavior' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Generative Agents: Interactive Simulacra of Human Behavior Joon Sung Park Stanford University Stanford, USA joonspk@stanford.edu Joseph C. O’Brien Stanford University Stanford, USA..."
-      },
-      {
-        "question": "'Interactive Simulacra of Human Behavior' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2023년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "Generative Agents: Interactive Simulacra of Human Behavior Joon Sung Park Stanford University Stanford, USA joonspk@stanford.edu Joseph C. O’Brien Stanford University Stanford, USA...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
     "category": "기술 설계 문서",
     "topic": "로컬 문서: Interpack_2023_출장보고서_플랜트_구매(23.05.18_REV0)",
     "title": "Interpack_2023_출장보고서_플랜트_구매(23.05.18_REV0)",
@@ -642,171 +345,6 @@
   },
   {
     "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: KoMA",
-    "title": "KoMA",
-    "source": "로컬 소머즈 문서고",
-    "year": 2017,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/KoMA.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'KoMA' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: 1 KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models Kemou Jiang1, Xuan Cai1, Zhiyong Cui*1, Aoyong Li1, Yilong Ren1, Haiyang Yu1, Hao Y..."
-      },
-      {
-        "question": "'KoMA' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2017년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "1 KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models Kemou Jiang1, Xuan Cai1, Zhiyong Cui*1, Aoyong Li1, Yilong Ren1, Haiyang Yu1, Hao Y...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: Lora",
-    "title": "Lora",
-    "source": "로컬 소머즈 문서고",
-    "year": 2016,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Lora.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'Lora' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: LORA: LOW-RANK ADAPTATION OF LARGE LAN- GUAGE MODELS Edward Hu∗ Yelong Shen∗ Phillip Wallis Zeyuan Allen-Zhu Yuanzhi Li Shean Wang Lu Wang Weizhu Chen Microsoft Corporation {edward..."
-      },
-      {
-        "question": "'Lora' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2016년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "LORA: LOW-RANK ADAPTATION OF LARGE LAN- GUAGE MODELS Edward Hu∗ Yelong Shen∗ Phillip Wallis Zeyuan Allen-Zhu Yuanzhi Li Shean Wang Lu Wang Weizhu Chen Microsoft Corporation {edward...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: Measuring the Effect on Human-Like Agenda Generation",
-    "title": "Measuring the Effect on Human-Like Agenda Generation",
-    "source": "FDA",
-    "year": 2015,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Measuring the Effect on Human-Like Agenda Generation.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'Measuring the Effect on Human-Like Agenda Generation' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Inducing Personality in LLM-Based Honeypot Agents: Measuring the Effect on Human-Like Agenda Generation Lewis Newsham and Ryan Hyland and Daniel Prince School of Computing and Comm..."
-      },
-      {
-        "question": "'Measuring the Effect on Human-Like Agenda Generation' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 FDA 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "Inducing Personality in LLM-Based Honeypot Agents: Measuring the Effect on Human-Like Agenda Generation Lewis Newsham and Ryan Hyland and Daniel Prince School of Computing and Comm...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: medicalRag",
-    "title": "medicalRag",
-    "source": "로컬 소머즈 문서고",
-    "year": 2019,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/medicalRag.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'medicalRag' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: MEDICAL GRAPH RAG: TOWARDS SAFE MEDICAL LARGE LANGUAGE MODEL VIA GRAPH RETRIEVAL- AUGMENTED GENERATION Junde Wu University of Oxford jundewu@ieee.org Jiayuan Zhu University of Oxfo..."
-      },
-      {
-        "question": "'medicalRag' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2019년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "MEDICAL GRAPH RAG: TOWARDS SAFE MEDICAL LARGE LANGUAGE MODEL VIA GRAPH RETRIEVAL- AUGMENTED GENERATION Junde Wu University of Oxford jundewu@ieee.org Jiayuan Zhu University of Oxfo...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf",
-    "title": "Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf",
-    "source": "로컬 소머즈 문서고",
-    "year": 2017,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Praise for Natural Language Processing with Transformers Pretrained transformer language models have taken the NLP world by storm, while libraries such as   Transformers have made ..."
-      },
-      {
-        "question": "'Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2017년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "Praise for Natural Language Processing with Transformers Pretrained transformer language models have taken the NLP world by storm, while libraries such as   Transformers have made ...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
     "category": "기술 설계 문서",
     "topic": "로컬 문서: NVIDIA_GTC_2026_전시회_참관_보고서",
     "title": "NVIDIA_GTC_2026_전시회_참관_보고서",
@@ -834,39 +372,6 @@
       }
     ],
     "summary": "NVIDIA GTC 2026 참관보고서  NVIDIA GPU Technology Conference1. NVIDIA GTC 2026 참관개요일정장소내용비고1일차03.14( •전시회명: NVIDIA GPU Technology Conference(NVIDIA GTC 2026) •장소: 미국캘리포니아산호세McEnery 컨벤션센...",
-    "applied_constraints": {
-      "mode": "local_file_parser"
-    }
-  },
-  {
-    "date": "2026-06-23",
-    "category": "학술 논문",
-    "topic": "로컬 문서: RAG",
-    "title": "RAG",
-    "source": "로컬 소머즈 문서고",
-    "year": 2015,
-    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/RAG.pdf",
-    "reliability": "★★★★☆",
-    "scores": {
-      "source_reliability": 4,
-      "recency": 2,
-      "professionalism": 5,
-      "originality": 5,
-      "practicality": 4,
-      "data_density": 4,
-      "objectivity": 5
-    },
-    "knowledge_chunks": [
-      {
-        "question": "'RAG' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
-        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks Patrick Lewis†‡, Ethan Perez⋆, Aleksandra Piktus†, Fabio Petroni†, Vladimir Karpukhin†, Naman Goyal†, Heinrich Kütt..."
-      },
-      {
-        "question": "'RAG' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
-        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
-      }
-    ],
-    "summary": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks Patrick Lewis†‡, Ethan Perez⋆, Aleksandra Piktus†, Fabio Petroni†, Vladimir Karpukhin†, Naman Goyal†, Heinrich Kütt...",
     "applied_constraints": {
       "mode": "local_file_parser"
     }
@@ -1068,5 +573,515 @@
     "applied_constraints": {
       "mode": "local_file_parser"
     }
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: 45530",
+    "title": "45530",
+    "source": "로컬 소머즈 문서고",
+    "year": 2015,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/45530.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'45530' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Deep Neural Networks for YouTube Recommendations Paul Covington, Jay Adams, Emre Sargin Google Mountain View, CA {pcovington, jka, msargin}@google.com ABSTRACT YouTube represents o..."
+      },
+      {
+        "question": "'45530' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Deep Neural Networks for YouTube Recommendations Paul Covington, Jay Adams, Emre Sargin Google Mountain View, CA {pcovington, jka, msargin}@google.com ABSTRACT YouTube represents o...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: A Survey on Memory Mechanisms in the Era of LLMs",
+    "title": "A Survey on Memory Mechanisms in the Era of LLMs",
+    "source": "로컬 소머즈 문서고",
+    "year": 2025,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/A Survey on Memory Mechanisms in the Era of LLMs.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'A Survey on Memory Mechanisms in the Era of LLMs' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Li..."
+      },
+      {
+        "question": "'A Survey on Memory Mechanisms in the Era of LLMs' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2025년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Li...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: agentic rag",
+    "title": "agentic rag",
+    "source": "로컬 소머즈 문서고",
+    "year": 2015,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/agentic rag.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'agentic rag' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs Yangning Li1*, Weizhi Zhang2*, Yuyao Yang2, Wei-Chieh Huang2, Yaozu Wu3 Junyu Luo4, Yuanchen Bei5..."
+      },
+      {
+        "question": "'agentic rag' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs Yangning Li1*, Weizhi Zhang2*, Yuyao Yang2, Wei-Chieh Huang2, Yaozu Wu3 Junyu Luo4, Yuanchen Bei5...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Captology_Behavior_Model_for_Persuasive_Design_2009_(1)",
+    "title": "Captology_Behavior_Model_for_Persuasive_Design_2009_(1)",
+    "source": "로컬 소머즈 문서고",
+    "year": 2026,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Captology_Behavior_Model_for_Persuasive_Design_2009_(1).pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Captology_Behavior_Model_for_Persuasive_Design_2009_(1)' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: A Behavior Model for Persuasive Design    BJ Fogg  Persuasive Technology Lab  Stanford University  captology.stanford.edu  www.bjfogg.com  bjfogg@stanford.edu         Abstract  Thi..."
+      },
+      {
+        "question": "'Captology_Behavior_Model_for_Persuasive_Design_2009_(1)' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2026년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "A Behavior Model for Persuasive Design    BJ Fogg  Persuasive Technology Lab  Stanford University  captology.stanford.edu  www.bjfogg.com  bjfogg@stanford.edu         Abstract  Thi...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: ChatDev",
+    "title": "ChatDev",
+    "source": "로컬 소머즈 문서고",
+    "year": 2015,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/ChatDev.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'ChatDev' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: ChatDev: Communicative Agents for Software Development Chen Qian⋆ Wei Liu⋆ Hongzhang Liu♠ Nuo Chen⋆ Yufan Dang⋆ Jiahao Li⋆ Cheng Yang♣ Weize Chen⋆ Yusheng Su⋆ Xin Cong⋆ Juyuan Xu⋆ ..."
+      },
+      {
+        "question": "'ChatDev' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "ChatDev: Communicative Agents for Software Development Chen Qian⋆ Wei Liu⋆ Hongzhang Liu♠ Nuo Chen⋆ Yufan Dang⋆ Jiahao Li⋆ Cheng Yang♣ Weize Chen⋆ Yusheng Su⋆ Xin Cong⋆ Juyuan Xu⋆ ...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Design and Evaluation for Enterprise",
+    "title": "Design and Evaluation for Enterprise",
+    "source": "로컬 소머즈 문서고",
+    "year": 2024,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Design and Evaluation for Enterprise.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Design and Evaluation for Enterprise' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications Raphael Shu∗, Nilaksh Das∗, Michelle Yuan∗, Monica Sunkara, Yi Zhang AWS Bedroc..."
+      },
+      {
+        "question": "'Design and Evaluation for Enterprise' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2024년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications Raphael Shu∗, Nilaksh Das∗, Michelle Yuan∗, Monica Sunkara, Yi Zhang AWS Bedroc...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: ha_arXiv_2018",
+    "title": "ha_arXiv_2018",
+    "source": "로컬 소머즈 문서고",
+    "year": 2015,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/ha_arXiv_2018.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'ha_arXiv_2018' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: World Models David Ha 1 J¨urgen Schmidhuber 2 3 Abstract We explore building generative neural network models of popular reinforcement learning environments. Our world model can be..."
+      },
+      {
+        "question": "'ha_arXiv_2018' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "World Models David Ha 1 J¨urgen Schmidhuber 2 3 Abstract We explore building generative neural network models of popular reinforcement learning environments. Our world model can be...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "일반 기술 분석서",
+    "topic": "로컬 문서: Humanoid_Trust_and_Safety_Roadmap",
+    "title": "Humanoid_Trust_and_Safety_Roadmap",
+    "source": "로컬 소머즈 문서고",
+    "year": 2026,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Humanoid_Trust_and_Safety_Roadmap.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Humanoid_Trust_and_Safety_Roadmap' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '일반 기술 분석서' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: 본문 텍스트를 추출할 수 없거나 이미지 위주의 문서입니다. 파일명을 기반으로 지식을 정리합니다...."
+      },
+      {
+        "question": "'Humanoid_Trust_and_Safety_Roadmap' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2026년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "본문 텍스트를 추출할 수 없거나 이미지 위주의 문서입니다. 파일명을 기반으로 지식을 정리합니다....",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Interactive Simulacra of Human Behavior",
+    "title": "Interactive Simulacra of Human Behavior",
+    "source": "로컬 소머즈 문서고",
+    "year": 2023,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Interactive Simulacra of Human Behavior.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 4,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Interactive Simulacra of Human Behavior' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Generative Agents: Interactive Simulacra of Human Behavior Joon Sung Park Stanford University Stanford, USA joonspk@stanford.edu Joseph C. O’Brien Stanford University Stanford, USA..."
+      },
+      {
+        "question": "'Interactive Simulacra of Human Behavior' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2023년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Generative Agents: Interactive Simulacra of Human Behavior Joon Sung Park Stanford University Stanford, USA joonspk@stanford.edu Joseph C. O’Brien Stanford University Stanford, USA...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: KoMA",
+    "title": "KoMA",
+    "source": "로컬 소머즈 문서고",
+    "year": 2017,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/KoMA.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'KoMA' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: 1 KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models Kemou Jiang1, Xuan Cai1, Zhiyong Cui*1, Aoyong Li1, Yilong Ren1, Haiyang Yu1, Hao Y..."
+      },
+      {
+        "question": "'KoMA' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2017년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "1 KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models Kemou Jiang1, Xuan Cai1, Zhiyong Cui*1, Aoyong Li1, Yilong Ren1, Haiyang Yu1, Hao Y...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Lora",
+    "title": "Lora",
+    "source": "로컬 소머즈 문서고",
+    "year": 2016,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Lora.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Lora' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: LORA: LOW-RANK ADAPTATION OF LARGE LAN- GUAGE MODELS Edward Hu∗ Yelong Shen∗ Phillip Wallis Zeyuan Allen-Zhu Yuanzhi Li Shean Wang Lu Wang Weizhu Chen Microsoft Corporation {edward..."
+      },
+      {
+        "question": "'Lora' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2016년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "LORA: LOW-RANK ADAPTATION OF LARGE LAN- GUAGE MODELS Edward Hu∗ Yelong Shen∗ Phillip Wallis Zeyuan Allen-Zhu Yuanzhi Li Shean Wang Lu Wang Weizhu Chen Microsoft Corporation {edward...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Measuring the Effect on Human-Like Agenda Generation",
+    "title": "Measuring the Effect on Human-Like Agenda Generation",
+    "source": "FDA",
+    "year": 2015,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Measuring the Effect on Human-Like Agenda Generation.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Measuring the Effect on Human-Like Agenda Generation' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Inducing Personality in LLM-Based Honeypot Agents: Measuring the Effect on Human-Like Agenda Generation Lewis Newsham and Ryan Hyland and Daniel Prince School of Computing and Comm..."
+      },
+      {
+        "question": "'Measuring the Effect on Human-Like Agenda Generation' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 FDA 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Inducing Personality in LLM-Based Honeypot Agents: Measuring the Effect on Human-Like Agenda Generation Lewis Newsham and Ryan Hyland and Daniel Prince School of Computing and Comm...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: medicalRag",
+    "title": "medicalRag",
+    "source": "로컬 소머즈 문서고",
+    "year": 2019,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/medicalRag.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'medicalRag' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: MEDICAL GRAPH RAG: TOWARDS SAFE MEDICAL LARGE LANGUAGE MODEL VIA GRAPH RETRIEVAL- AUGMENTED GENERATION Junde Wu University of Oxford jundewu@ieee.org Jiayuan Zhu University of Oxfo..."
+      },
+      {
+        "question": "'medicalRag' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2019년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "MEDICAL GRAPH RAG: TOWARDS SAFE MEDICAL LARGE LANGUAGE MODEL VIA GRAPH RETRIEVAL- AUGMENTED GENERATION Junde Wu University of Oxford jundewu@ieee.org Jiayuan Zhu University of Oxfo...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf",
+    "title": "Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf",
+    "source": "로컬 소머즈 문서고",
+    "year": 2017,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Praise for Natural Language Processing with Transformers Pretrained transformer language models have taken the NLP world by storm, while libraries such as   Transformers have made ..."
+      },
+      {
+        "question": "'Natural_Language_Processing_with_Transformers_Building_Language_Applications_with_Hugging_Face_by_Lewis_Tunstall__Leandro_von_Werra__Thomas_Wolf' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2017년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Praise for Natural Language Processing with Transformers Pretrained transformer language models have taken the NLP world by storm, while libraries such as   Transformers have made ...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
+  },
+  {
+    "date": "2026-06-23",
+    "category": "학술 논문",
+    "topic": "로컬 문서: RAG",
+    "title": "RAG",
+    "source": "로컬 소머즈 문서고",
+    "year": 2015,
+    "url": "file:///D:/4.Others/antigravity/전문문서 검색/input/RAG.pdf",
+    "reliability": "★★★★☆",
+    "scores": {
+      "source_reliability": 4,
+      "recency": 2,
+      "professionalism": 5,
+      "originality": 5,
+      "practicality": 4,
+      "data_density": 4,
+      "objectivity": 5
+    },
+    "knowledge_chunks": [
+      {
+        "question": "'RAG' 문서의 주요 목적과 핵심 요약은 무엇입니까?",
+        "answer": "본 문서는 '학술 논문' 유형으로 분류되며, 주요 요약 내용은 다음과 같습니다: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks Patrick Lewis†‡, Ethan Perez⋆, Aleksandra Piktus†, Fabio Petroni†, Vladimir Karpukhin†, Naman Goyal†, Heinrich Kütt..."
+      },
+      {
+        "question": "'RAG' 문서에서 도출할 수 있는 실무 적용 포인트는 무엇입니까?",
+        "answer": "문서의 텍스트 구성 성분을 분석한 결과, 발행 연도 2015년 기준의 로컬 소머즈 문서고 관련 지식 자산입니다. 분석 결과에 기반해 설계 검토 및 URS 사양 검증에 참고하시기 바랍니다."
+      }
+    ],
+    "summary": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks Patrick Lewis†‡, Ethan Perez⋆, Aleksandra Piktus†, Fabio Petroni†, Vladimir Karpukhin†, Naman Goyal†, Heinrich Kütt...",
+    "applied_constraints": {
+      "mode": "local_file_parser"
+    },
+    "is_confidential": false
   }
 ]

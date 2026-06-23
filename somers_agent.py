@@ -15,11 +15,13 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
 class SomersAgent:
-    def __init__(self, rules_path: str = "somers_rules.yaml", kb_path: str = "knowledge_base.json"):
+    def __init__(self, rules_path: str = "somers_rules.yaml", kb_path: str = "knowledge_base.json", kb_secure_path: str = "knowledge_base_secure.json"):
         self.rules_path = rules_path
         self.kb_path = kb_path
+        self.kb_secure_path = kb_secure_path
         self.rules = self._load_rules()
-        self.kb = self._load_kb()
+        self.kb = self._load_kb(self.kb_path)
+        self.kb_secure = self._load_kb(self.kb_secure_path)
 
     def _load_rules(self) -> Dict[str, Any]:
         if os.path.exists(self.rules_path):
@@ -27,14 +29,41 @@ class SomersAgent:
                 return yaml.safe_load(f)
         return {}
 
-    def _load_kb(self) -> List[Dict[str, Any]]:
-        if os.path.exists(self.kb_path):
+    def _load_kb(self, path: str) -> List[Dict[str, Any]]:
+        if os.path.exists(path):
             try:
-                with open(self.kb_path, "r", encoding="utf-8") as f:
+                with open(path, "r", encoding="utf-8") as f:
                     return json.load(f)
             except Exception:
                 return []
         return []
+
+    def is_confidential(self, text: str) -> bool:
+        """
+        입력된 텍스트에 식품엔지니어링 또는 전시회 관련 기밀 키워드가 들어있는지 판단합니다.
+        """
+        if not text:
+            return False
+        
+        # somers_rules.yaml에 설정된 보안 키워드들을 가져옴
+        sec_rules = self.rules.get("security_rules", {})
+        keywords = sec_rules.get("confidential_keywords", [])
+        
+        # 기본 하드코딩 백업 키워드 (규칙 파일이 없을 시 대응)
+        if not keywords:
+            keywords = ["식품", "위생", "배관", "haccp", "ehedg", "플랜트", "설비", "전시회", "참관", "전시", "계획서", "보고서", "인터팩", "interpack", "gtc"]
+            
+        text_lower = text.lower()
+        for kw in keywords:
+            if kw.lower() in text_lower:
+                return True
+        return False
+
+    def save_kb(self):
+        with open(self.kb_path, "w", encoding="utf-8") as f:
+            json.dump(self.kb, f, ensure_ascii=False, indent=2)
+        with open(self.kb_secure_path, "w", encoding="utf-8") as f:
+            json.dump(self.kb_secure, f, ensure_ascii=False, indent=2)
 
     def _clean_xml_string(self, text: str) -> str:
         """
@@ -52,9 +81,7 @@ class SomersAgent:
                 allowed_chars.append(char)
         return "".join(allowed_chars)
 
-    def save_kb(self):
-        with open(self.kb_path, "w", encoding="utf-8") as f:
-            json.dump(self.kb, f, ensure_ascii=False, indent=2)
+    # 기존 save_kb는 위의 신규 정의로 대체되어 삭제합니다.
 
     def plan_queries(self, topic: str) -> Dict[str, List[str]]:
         """
@@ -280,18 +307,34 @@ class SomersAgent:
             learning_entry = self.train_ai_knowledge(doc, rating_info, topic, constraints)
             new_learnings.append(learning_entry)
             
-            # 5. 지식베이스에 추가 (중복 방지)
-            if not any(item["title"] == learning_entry["title"] for item in self.kb):
-                self.kb.append(learning_entry)
+            # 5. 지식베이스에 추가 (기밀 여부에 따른 분리 적재 및 중복 방지)
+            full_content_to_check = f"{learning_entry['title']} {learning_entry['topic']} {learning_entry['summary']} {doc.get('details', '')}"
+            if self.is_confidential(full_content_to_check):
+                learning_entry["is_confidential"] = True
+                if not any(item["title"] == learning_entry["title"] for item in self.kb_secure):
+                    self.kb_secure.append(learning_entry)
+            else:
+                learning_entry["is_confidential"] = False
+                if not any(item["title"] == learning_entry["title"] for item in self.kb):
+                    self.kb.append(learning_entry)
                 
         self.save_kb()
-        print(f" -> 총 {len(new_learnings)}건의 전문 지식을 학습하고 {self.kb_path}에 저장 완료했습니다.")
+        print(f" -> 총 {len(new_learnings)}건의 전문 지식을 학습하고 지식베이스({self.kb_path} 및 {self.kb_secure_path})에 분리 저장 완료했습니다.")
         return new_learnings
 
     def generate_docx_report(self, learnings: List[Dict[str, Any]], filename: str = "보고서.docx"):
         """
         학습된 지식을 바탕으로 전문가 수준의 Word 보고서를 생성합니다.
         """
+        # 보안 필터링: 파일명에 "보안_"이 포함되어 있지 않다면 기밀 자료는 제외합니다.
+        is_secure_file = "보안_" in os.path.basename(filename)
+        if not is_secure_file:
+            learnings = [item for item in learnings if not item.get("is_confidential", False)]
+            
+        if not learnings:
+            print(f" -> [{os.path.basename(filename)}] 보고서에 포함할 일반 지식이 없어 생성을 건너뜁니다.")
+            return
+            
         doc = docx.Document()
         
         # 스타일 정의
@@ -366,6 +409,15 @@ class SomersAgent:
         """
         템플릿에 맞춘 Markdown 보고서를 생성합니다.
         """
+        # 보안 필터링: 파일명에 "보안_"이 포함되어 있지 않다면 기밀 자료는 제외합니다.
+        is_secure_file = "보안_" in os.path.basename(filename)
+        if not is_secure_file:
+            learnings = [item for item in learnings if not item.get("is_confidential", False)]
+            
+        if not learnings:
+            print(f" -> [{os.path.basename(filename)}] 보고서에 포함할 일반 지식이 없어 생성을 건너뜁니다.")
+            return
+            
         md_content = []
         md_content.append(f"# [{learnings[0]['topic']}] 전문자료 검색 및 학습 결과\n")
         
@@ -443,7 +495,13 @@ class SomersAgent:
         수집된 문서들의 신뢰성 평가 지수(출처, 최신성 등)를 시각화하여 저장합니다.
         (seaborn 스타일 미사용 및 koreanize-matplotlib 준수)
         """
+        # 보안 필터링: 파일명에 "보안_"이 포함되어 있지 않다면 기밀 자료는 제외합니다.
+        is_secure_file = "보안_" in os.path.basename(filename)
+        if not is_secure_file:
+            learnings = [item for item in learnings if not item.get("is_confidential", False)]
+            
         if not learnings:
+            print(f" -> [{os.path.basename(filename)}] 통계 차트에 포함할 일반 지식이 없어 생성을 건너뜁니다.")
             return
             
         labels = ["출처신뢰도", "최신성", "전문성", "원문성", "실무성"]
@@ -700,10 +758,16 @@ class SomersAgent:
                 
                 new_learnings.append(learning_entry)
                 
-                # 중복 저장 방지
-                # 기존 항목 중 동일 타이틀이 있다면 덮어쓰거나 지우고 교체하도록 처리
-                self.kb = [item for item in self.kb if item["title"] != learning_entry["title"]]
-                self.kb.append(learning_entry)
+                # 기밀 여부에 따른 분리 적재 및 중복 방지
+                full_content_to_check = f"{clean_filename} {category} {summary} {full_text}"
+                if self.is_confidential(full_content_to_check):
+                    learning_entry["is_confidential"] = True
+                    self.kb_secure = [item for item in self.kb_secure if item["title"] != learning_entry["title"]]
+                    self.kb_secure.append(learning_entry)
+                else:
+                    learning_entry["is_confidential"] = False
+                    self.kb = [item for item in self.kb if item["title"] != learning_entry["title"]]
+                    self.kb.append(learning_entry)
                     
             except Exception as e:
                 print(f" -> '{filename}' 파싱 오류 발생: {e}")

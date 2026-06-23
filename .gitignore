@@ -11,3 +11,9 @@ input/*
 # Local OS Files
 Thumbs.db
 Desktop.ini
+
+# Security & Confidential Data Filtering
+# 식품엔지니어링 및 전시회 기밀 지식 데이터와 보안 보고서는 로컬 보관 전용입니다.
+knowledge_base_secure.json
+report/보안_*
+*보안_*
