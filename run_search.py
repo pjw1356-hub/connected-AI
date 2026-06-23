@@ -56,14 +56,18 @@ def get_interactive_inputs():
     }, learn_pdf, sync
 
 def main():
+    import os
+    os.makedirs("input", exist_ok=True)
+    os.makedirs("report", exist_ok=True)
+
     parser = argparse.ArgumentParser(description="소머즈 에이전트 전문 문서 검색 및 일일 AI 학습기 CLI")
     parser.add_argument("topic", type=str, nargs="?", default=None, help="검색 및 학습할 주제 (생략 시 대화형 모드 구동)")
-    parser.add_argument("--docx", type=str, default="학습결과_보고서.docx", help="저장할 Word 보고서 파일명")
-    parser.add_argument("--md", type=str, default="학습결과_보고서.md", help="저장할 마크다운 보고서 파일명")
-    parser.add_argument("--chart", type=str, default="신뢰도_분포.png", help="저장할 시각화 차트 파일명")
+    parser.add_argument("--docx", type=str, default="report/학습결과_보고서.docx", help="저장할 Word 보고서 파일명")
+    parser.add_argument("--md", type=str, default="report/학습결과_보고서.md", help="저장할 마크다운 보고서 파일명")
+    parser.add_argument("--chart", type=str, default="report/신뢰도_분포.png", help="저장할 시각화 차트 파일명")
     parser.add_argument("--sync", action="store_true", help="학습 완료 후 깃허브 자동 동기화 활성화")
     parser.add_argument("--repo", type=str, default="https://github.com/pjw1356-hub/connected-AI.git", help="동기화할 깃허브 저장소 주소")
-    parser.add_argument("--pdf-dir", type=str, default="incoming_documents", help="로컬 PDF를 로드하여 일괄 지식화할 디렉토리 경로")
+    parser.add_argument("--pdf-dir", type=str, default="input", help="로컬 PDF를 로드하여 일괄 지식화할 디렉토리 경로")
     
     args = parser.parse_args()
     

@@ -516,10 +516,9 @@ class SomersAgent:
             print(" -> Git 이메일을 'somers-agent@users.noreply.github.com'으로 임시 설정합니다.")
             run_git(["git", "config", "user.email", "somers-agent@users.noreply.github.com"])
 
-        # 4. 파일 스테이징
-        files_to_sync = ["knowledge_base.json", "*.md", "*.docx", "*.png", "somers_rules.yaml", "somers_agent.py", "run_search.py"]
-        for pattern in files_to_sync:
-            run_git(["git", "add", pattern])
+        # 4. 파일 스테이징 (모든 삭제/변경 사항을 반영하되 .github 폴더는 스테이징에서 안전하게 제외)
+        run_git(["git", "add", "-A"])
+        run_git(["git", "restore", "--staged", ".github"])
 
         # 5. 커밋 수행 (변경 사항이 있을 때만)
         status_check = run_git(["git", "status", "--porcelain"])
@@ -713,7 +712,7 @@ class SomersAgent:
         print(f" -> 로컬 문서 총 {len(new_learnings)}건을 성공적으로 분류 학습하여 지식베이스에 추가하였습니다.")
         return new_learnings
 
-    def learn_local_pdfs(self, pdf_dir: str = "incoming_documents") -> List[Dict[str, Any]]:
+    def learn_local_pdfs(self, pdf_dir: str = "input") -> List[Dict[str, Any]]:
         """
         하위 호환성을 유지하며 로컬 디렉토리 내의 모든 PDF, PPTX, DOCX 파일을 찾아 학습하도록 호출합니다.
         """

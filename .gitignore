@@ -1,5 +1,13 @@
-# 임시 파일 및 캐시 제외
-~$*
+# Virtual Environment
 .venv/
 __pycache__/
 *.pyc
+
+# Local Data and Model Input/Output
+# 원본 문서(PDF, PPTX 등)는 대용량 파일이므로 깃허브 업로드 대상에서 제외합니다.
+input/*
+!input/.gitkeep
+
+# Local OS Files
+Thumbs.db
+Desktop.ini
