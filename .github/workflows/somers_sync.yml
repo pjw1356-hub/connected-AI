@@ -1,0 +1,37 @@
+name: 소머즈 에이전트 자동 지식 동기화 파이프라인
+
+on:
+  push:
+    paths:
+      - 'incoming_documents/**'
+  workflow_dispatch:
+
+jobs:
+  sync-learning:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 코드 체크아웃
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: 파이썬 환경 설정 (3.10)
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: 시스템 의존성 설치 (차트 시각화용 나눔 한글 폰트 설치)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y fonts-nanum
+        fc-cache -fv
+
+    - name: 파이썬 라이브러리 설치
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml python-docx matplotlib koreanize-matplotlib PyMuPDF python-pptx
+
+    - name: 소머즈 에이전트 실행 및 깃허브 동기화
+      run: |
+        python run_search.py "자동화 문서 학습" --sync
