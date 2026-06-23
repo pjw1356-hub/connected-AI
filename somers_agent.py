@@ -4,7 +4,7 @@ import yaml
 import datetime
 import subprocess
 import glob
-from pypdf import PdfReader
+import fitz  # PyMuPDF
 from typing import List, Dict, Any
 import matplotlib.pyplot as plt
 import koreanize_matplotlib  # 한글 폰트 자동 설정
@@ -35,6 +35,22 @@ class SomersAgent:
             except Exception:
                 return []
         return []
+
+    def _clean_xml_string(self, text: str) -> str:
+        """
+        python-docx 등 XML 생성 시 오류를 방지하기 위해 널 바이트 및 제어 문자를 제거합니다.
+        """
+        if not text:
+            return ""
+        allowed_chars = []
+        for char in text:
+            cp = ord(char)
+            if (cp == 0x9 or cp == 0xA or cp == 0xD or 
+                (0x20 <= cp <= 0xD7FF) or 
+                (0xE000 <= cp <= 0xFFFD) or 
+                (0x10000 <= cp <= 0x10FFFF)):
+                allowed_chars.append(char)
+        return "".join(allowed_chars)
 
     def save_kb(self):
         with open(self.kb_path, "w", encoding="utf-8") as f:
@@ -486,29 +502,52 @@ class SomersAgent:
             print(" -> 원격 저장소(origin)를 등록합니다.")
             run_git(["git", "remote", "add", "origin", repo_url])
         else:
-            # 이미 등록된 경우 사용자가 설정한 토큰 URL(ghp_... 포함)이 지워지지 않도록 덮어쓰기를 스킵하되, 
-            # 만약 다른 저장소로 강제 전환하고자 한다면 set-url 할 수 있게 설계
             if "connected-AI" not in remote_check.stdout:
                 print(" -> 새로운 원격 저장소 주소로 갱신합니다.")
                 run_git(["git", "remote", "set-url", "origin", repo_url])
 
-        # 3. 파일 스테이징
-        # 주요 동기화 대상 명시
+        # 3. Git 사용자 정보 검사 및 임시 설정 (GitHub Actions 대응)
+        name_check = run_git(["git", "config", "user.name"])
+        email_check = run_git(["git", "config", "user.email"])
+        if not name_check.stdout.strip():
+            print(" -> Git 사용자명을 'somers-agent'로 임시 설정합니다.")
+            run_git(["git", "config", "user.name", "somers-agent"])
+        if not email_check.stdout.strip():
+            print(" -> Git 이메일을 'somers-agent@users.noreply.github.com'으로 임시 설정합니다.")
+            run_git(["git", "config", "user.email", "somers-agent@users.noreply.github.com"])
+
+        # 4. 파일 스테이징
         files_to_sync = ["knowledge_base.json", "*.md", "*.docx", "*.png", "somers_rules.yaml", "somers_agent.py", "run_search.py"]
         for pattern in files_to_sync:
             run_git(["git", "add", pattern])
 
-        # 4. 커밋 수행
-        commit_msg = f"daily_learning_sync: {datetime.date.today().isoformat()} - 지식베이스 및 보고서 업데이트"
-        run_git(["git", "commit", "-m", commit_msg])
+        # 5. 커밋 수행 (변경 사항이 있을 때만)
+        status_check = run_git(["git", "status", "--porcelain"])
+        if not status_check.stdout.strip():
+            print(" -> 변경된 지식 및 산출물 파일이 없습니다. 동기화를 건너뜁니다.")
+            return
 
-        # 5. 푸시 실행
+        commit_msg = f"daily_learning_sync: {datetime.date.today().isoformat()} - 지식베이스 및 보고서 업데이트"
+        commit_res = run_git(["git", "commit", "-m", commit_msg])
+
+        if commit_res.returncode == 0:
+            print(" -> 로컬 변경 사항 커밋 완료.")
+        
+        # 6. 원격 변경사항 안전하게 가져오기 (Rebase)
+        print(" -> 원격 저장소의 최신 이력을 가져와 병합을 시도합니다 (Pull with Rebase)...")
+        pull_res = run_git(["git", "pull", "--rebase", "origin", "main"])
+        if pull_res.returncode != 0:
+            print(" -> [오류] 원격 변경사항을 가져오는 중 충돌이 발생했거나 오류가 있습니다. 강제 병합 취소(Abort)를 수행합니다.")
+            run_git(["git", "rebase", "--abort"])
+            return
+
+        # 7. 푸시 실행
         print(" -> 깃허브 저장소로 Push를 시도합니다...")
-        push_res = run_git(["git", "push", "-f", "-u", "origin", "main"])
+        push_res = run_git(["git", "push", "origin", "main"])
         if push_res.returncode == 0:
             print(" -> 깃허브 동기화가 성공적으로 완료되었습니다!")
         else:
-            print(" -> 깃허브 푸시 중 오류가 발생했거나 최신 변경 사항이 이미 반영되어 있습니다.")
+            print(" -> 깃허브 푸시 중 오류가 발생했습니다. 권한 설정 혹은 원격 저장소 상태를 확인하세요.")
 
     def _extract_docx_text(self, docx_path: str) -> str:
         """
@@ -525,9 +564,26 @@ class SomersAgent:
                     for cell in row.cells:
                         if cell.text:
                             full_text.append(cell.text)
-            return "\n".join(full_text)
+            return self._clean_xml_string("\n".join(full_text))
         except Exception as e:
             print(f" -> DOCX 텍스트 추출 중 오류 발생 ({os.path.basename(docx_path)}): {e}")
+            return ""
+
+    def _extract_pptx_text(self, pptx_path: str) -> str:
+        """
+        PPTX 파일에서 슬라이드 본문 및 텍스트 박스 내용을 추출합니다.
+        """
+        try:
+            from pptx import Presentation
+            prs = Presentation(pptx_path)
+            full_text = []
+            for slide in prs.slides:
+                for shape in slide.shapes:
+                    if hasattr(shape, "text") and shape.text:
+                        full_text.append(shape.text)
+            return self._clean_xml_string("\n".join(full_text))
+        except Exception as e:
+            print(f" -> PPTX 텍스트 추출 중 오류 발생 ({os.path.basename(pptx_path)}): {e}")
             return ""
 
     def learn_local_files(self, file_paths: List[str]) -> List[Dict[str, Any]]:
@@ -552,14 +608,16 @@ class SomersAgent:
                 full_text = ""
                 # 1. 확장자별 텍스트 추출
                 if ext == ".pdf":
-                    reader = PdfReader(file_path)
-                    pages_to_read = min(len(reader.pages), 5)
+                    doc = fitz.open(file_path)
+                    pages_to_read = min(len(doc), 15)  # 최대 15페이지까지 더 정밀하게 탐독
                     for i in range(pages_to_read):
-                        text = reader.pages[i].extract_text()
+                        text = doc[i].get_text()
                         if text:
                             full_text += text + "\n"
                 elif ext == ".docx":
                     full_text = self._extract_docx_text(file_path)
+                elif ext == ".pptx":
+                    full_text = self._extract_pptx_text(file_path)
                 else:
                     print(f" -> 지원하지 않는 확장자입니다 ({ext}). 건너뜁니다.")
                     continue
@@ -567,6 +625,8 @@ class SomersAgent:
                 # 텍스트가 극도로 부족한 경우 예외 처리
                 if len(full_text.strip()) < 50:
                     full_text = "본문 텍스트를 추출할 수 없거나 이미지 위주의 문서입니다. 파일명을 기반으로 지식을 정리합니다."
+                else:
+                    full_text = self._clean_xml_string(full_text)
                 
                 # 2. 카테고리 자동 분류 (텍스트 키워드 기반 분류)
                 content_lower = full_text.lower()
@@ -653,13 +713,19 @@ class SomersAgent:
         print(f" -> 로컬 문서 총 {len(new_learnings)}건을 성공적으로 분류 학습하여 지식베이스에 추가하였습니다.")
         return new_learnings
 
-    def learn_local_pdfs(self, pdf_dir: str = ".") -> List[Dict[str, Any]]:
+    def learn_local_pdfs(self, pdf_dir: str = "incoming_documents") -> List[Dict[str, Any]]:
         """
-        하위 호환성을 위해 로컬 디렉토리 내의 모든 PDF 파일을 찾아 학습하도록 호출합니다.
+        하위 호환성을 유지하며 로컬 디렉토리 내의 모든 PDF, PPTX, DOCX 파일을 찾아 학습하도록 호출합니다.
         """
-        pdf_pattern = os.path.join(pdf_dir, "*.pdf")
-        pdf_files = glob.glob(pdf_pattern)
-        return self.learn_local_files(pdf_files)
+        if not os.path.exists(pdf_dir):
+            os.makedirs(pdf_dir, exist_ok=True)
+            
+        files = []
+        for ext in ["*.pdf", "*.pptx", "*.docx"]:
+            pattern = os.path.join(pdf_dir, ext)
+            # 대소문자 구분 없이 찾기 위해 glob 처리
+            files.extend(glob.glob(pattern))
+        return self.learn_local_files(files)
 
 
 # 단독 테스트를 위한 메인 함수

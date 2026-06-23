@@ -63,7 +63,7 @@ def main():
     parser.add_argument("--chart", type=str, default="신뢰도_분포.png", help="저장할 시각화 차트 파일명")
     parser.add_argument("--sync", action="store_true", help="학습 완료 후 깃허브 자동 동기화 활성화")
     parser.add_argument("--repo", type=str, default="https://github.com/pjw1356-hub/connected-AI.git", help="동기화할 깃허브 저장소 주소")
-    parser.add_argument("--pdf-dir", type=str, default=None, help="로컬 PDF를 로드하여 일괄 지식화할 디렉토리 경로")
+    parser.add_argument("--pdf-dir", type=str, default="incoming_documents", help="로컬 PDF를 로드하여 일괄 지식화할 디렉토리 경로")
     
     args = parser.parse_args()
     
@@ -76,7 +76,7 @@ def main():
             "max_age": 5,
             "user_request": ""
         }
-        learn_pdf = (args.pdf_dir is not None)
+        learn_pdf = True
         sync = args.sync
         
     agent = SomersAgent()
@@ -84,8 +84,8 @@ def main():
         learnings = []
         
         # 1. 로컬 PDF 파일들을 지식화하는 파이프라인 수행
-        if learn_pdf or args.pdf_dir:
-            pdf_path = args.pdf_dir if args.pdf_dir else "."
+        if learn_pdf:
+            pdf_path = args.pdf_dir if args.pdf_dir else "incoming_documents"
             pdf_learnings = agent.learn_local_pdfs(pdf_path)
             learnings.extend(pdf_learnings)
             
